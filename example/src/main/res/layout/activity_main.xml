@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2016 Source Allies
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="?android:actionBarSize" />
+
+            <com.klinker.android.badged_imageview.BadgedImageView
+                android:id="@+id/badge_1"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="12dp"
+                android:scaleType="centerCrop"
+                app:badgePadding="12dp" />
+
+            <com.klinker.android.badged_imageview.BadgedImageView
+                android:id="@+id/badge_2"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/gif"
+                android:layout_margin="12dp"
+                android:scaleType="centerCrop"
+                app:badgeGravity="end|bottom"
+                app:badgePadding="12dp"
+                app:badgeColor="@android:color/white"
+                app:badgeText="GIF" />
+
+            <com.klinker.android.badged_imageview.BadgedImageView
+                android:id="@+id/badge_3"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/talon"
+                android:layout_margin="12dp"
+                app:badgePadding="12dp"
+                app:badgeGravity="end|top"/>
+
+            <com.klinker.android.badged_imageview.BadgedImageView
+                android:id="@+id/badge_4"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/github"
+                android:layout_margin="12dp"
+                app:badgeGravity="start|top"
+                app:badgePadding="12dp"
+                app:badgeColor="@android:color/black"
+                app:badgeText="View on GitHub" />
+
+
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>
