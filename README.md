@@ -39,7 +39,7 @@ Download the source code and import it as a library project in Eclipse. The proj
 
 ## Example Usage
 
-Functionality can be found in the example's [MainActivity](https://github.com/klinker24/Android-BadgedImageView/blob/master/example/src/main/java/com/klinker/android/badged_imageview_example/MainActivity.java). Badges on ```BadgedImageView``` can be added (or changed) from code to your BadgedImageVie:
+Functionality can be found in the example's [MainActivity](https://github.com/klinker24/Android-BadgedImageView/blob/master/example/src/main/java/com/klinker/android/badged_imageview_example/MainActivity.java). Badges on ```BadgedImageView``` can be added (or changed) from code:
 
 ```java
 badgedIv.setBadge("YouTube", Color.RED);
