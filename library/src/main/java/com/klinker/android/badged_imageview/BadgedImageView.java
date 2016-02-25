@@ -24,6 +24,9 @@ import android.util.AttributeSet;
 import android.view.Gravity;
 import android.widget.ImageView;
 
+/**
+ * ImageView implementation that allows you to place 'badges' over the top that describe the image
+ */
 public class BadgedImageView extends ImageView {
 
     private boolean badgeBoundsSet = false;
@@ -33,10 +36,21 @@ public class BadgedImageView extends ImageView {
     private int badgePadding;
     private int badgeColor;
 
+    /**
+     * Create a new BadgedImageView. Use 0 padding, default gravity, and white for the color
+     * @param context current activity
+     */
     public BadgedImageView(Context context) {
         this(context, 0, 0, Color.WHITE);
     }
 
+    /**
+     * Create a new BadgedImageView
+     * @param context current activity
+     * @param badgeGravity Gravity.TOP, Gravity.BOTTOM, Gravity.RIGHT, Gravity.LEFT, Gravity.START, Gravity.END
+     * @param badgePadding Padding in DP
+     * @param badgeColor color you want the badge to be
+     */
     public BadgedImageView(Context context, int badgeGravity, int badgePadding, int badgeColor) {
         super(context);
 
@@ -45,6 +59,11 @@ public class BadgedImageView extends ImageView {
         this.badgeColor = badgeColor;
     }
 
+    /**
+     * Constructor for inflation from XML layout
+     * @param context current activity
+     * @param attrs provided by layout
+     */
     public BadgedImageView(Context context, AttributeSet attrs) {
         super(context, attrs);
 
@@ -60,10 +79,19 @@ public class BadgedImageView extends ImageView {
         }
     }
 
+    /**
+     * Set the text of the badge with the default color or the color defined in the XML layout
+     * @param text The string that you want the badge to display
+     */
     public void setBadge(String text) {
         setBadge(text, badgeColor);
     }
 
+    /**
+     * Set the text and the color for the badge you are displaying
+     * @param text The string that you want the badge to display
+     * @param color The color you want the badge to be
+     */
     public void setBadge(String text, int color) {
         badge = new BadgeDrawable(getContext(), text);
         badge.setColorFilter(color, PorterDuff.Mode.SRC_IN);

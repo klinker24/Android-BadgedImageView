@@ -6,6 +6,8 @@ Easily add badges to an ```ImageView``` to describe its content.
 
 Recently, in [Talon for Twitter](https://github.com/klinker24/Talon-for-Twitter), one of my challenges was that you couldn't tell if media was a GIF, video, YouTube, etc. All the images just had the generic play button on them. This library, based off of [Plaid](https://github.com/nickbutcher/plaid), was my way to fix that.
 
+Google+ uses a very similar style in their own app.
+
 ## Features
 
 PLace a badge over the top of the image view to describe its content.

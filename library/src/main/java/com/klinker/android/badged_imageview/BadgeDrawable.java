@@ -32,6 +32,9 @@ import android.util.DisplayMetrics;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Drawable implementation that displays "cut-out" text
+ */
 public class BadgeDrawable extends Drawable {
 
     // save the bitmaps in a map so that we don't have to recreate them when
