@@ -10,6 +10,8 @@
             <flag name="end" value="0x00800005" />
         </attr>
         <attr name="badgePadding" format="dimension|reference"/>
+        <attr name="badgePaddingX" format="dimension|reference"/>
+        <attr name="badgePaddingY" format="dimension|reference"/>
         <attr name="badgeText" format="string"/>
         <attr name="badgeColor" format="color"/>
     </declare-styleable>
