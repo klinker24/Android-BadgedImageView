@@ -77,7 +77,8 @@
                 android:layout_height="200dp"
                 android:src="@drawable/talon"
                 android:layout_margin="12dp"
-                app:badgePadding="12dp"
+                app:badgePaddingX="12dp"
+                app:badgePaddingY="24dp"
                 app:badgeGravity="end|top"/>
 
             <com.klinker.android.badged_imageview.BadgedImageView
