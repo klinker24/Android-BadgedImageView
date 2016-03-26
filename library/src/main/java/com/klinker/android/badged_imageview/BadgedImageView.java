@@ -95,6 +95,7 @@ public class BadgedImageView extends ImageView {
     public void setBadge(String text, int color) {
         badge = new BadgeDrawable(getContext(), text);
         badge.setColorFilter(color, PorterDuff.Mode.SRC_IN);
+        badgeBoundsSet = false;
 
         invalidate();
     }
