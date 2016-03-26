@@ -2,7 +2,7 @@
 
 ![Screenshot](preview.png)
 
-Easily add badges to an ```ImageView``` to describe its content.
+Easily add badges to an `ImageView` to describe its content.
 
 Recently, in [Talon for Twitter](https://github.com/klinker24/Talon-for-Twitter), one of my challenges was that you couldn't tell if media was a GIF, video, YouTube, etc. All the images just had the generic play button on them. This library, based off of [Plaid](https://github.com/nickbutcher/plaid), was my way to fix that.
 
@@ -10,11 +10,11 @@ Google+ uses a very similar style in their own app.
 
 ## Features
 
-PLace a badge over the top of the image view to describe its content.
+Place a badge over the top of the `ImageView` to describe its content.
 
  - Use any text you like
  - Change the badge color
- - Change the placement of the badge using ```Gravity```
+ - Change the placement of the badge using `Gravity`
  - Change the padding on the badge
 
 ## Installation
@@ -27,7 +27,7 @@ This is the preferred way. Simply add:
 
 ```groovy
 dependencies {
-    compile 'com.klinkerapps:badged_imageview:1.0.0@aar'
+    compile 'com.klinkerapps:badged_imageview:1.0.1@aar'
 }
 ```
 
@@ -39,7 +39,7 @@ Download the source code and import it as a library project in Eclipse. The proj
 
 ## Example Usage
 
-Functionality can be found in the example's [MainActivity](https://github.com/klinker24/Android-BadgedImageView/blob/master/example/src/main/java/com/klinker/android/badged_imageview_example/MainActivity.java). Badges on ```BadgedImageView``` can be added (or changed) from code:
+Functionality can be found in the example's [MainActivity](https://github.com/klinker24/Android-BadgedImageView/blob/master/example/src/main/java/com/klinker/android/badged_imageview_example/MainActivity.java). Badges on `BadgedImageView` can be added (or changed) from code:
 
 ```java
 badgedIv.setBadge("YouTube", Color.RED);
