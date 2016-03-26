@@ -34,6 +34,8 @@ public class BadgedImageView extends ImageView {
     private BadgeDrawable badge;
     private int badgeGravity;
     private int badgePadding;
+    private int badgePaddingX;
+    private int badgePaddingY;
     private int badgeColor;
 
     /**
@@ -71,6 +73,8 @@ public class BadgedImageView extends ImageView {
         badgeGravity = a.getInt(R.styleable.BadgedImageView_badgeGravity, Gravity.START | Gravity.BOTTOM);
         badgeColor = a.getColor(R.styleable.BadgedImageView_badgeColor, Color.WHITE);
         badgePadding = a.getDimensionPixelSize(R.styleable.BadgedImageView_badgePadding, 0);
+        badgePaddingX = a.getDimensionPixelSize(R.styleable.BadgedImageView_badgePaddingX, 0);
+        badgePaddingY = a.getDimensionPixelSize(R.styleable.BadgedImageView_badgePaddingY, 0);
         String badgeText = a.getString(R.styleable.BadgedImageView_badgeText);
         a.recycle();
 
@@ -125,8 +129,8 @@ public class BadgedImageView extends ImageView {
                 badge.getIntrinsicWidth(),
                 badge.getIntrinsicHeight(),
                 new Rect(0, 0, getWidth(), getHeight()),
-                badgePadding,
-                badgePadding,
+                badgePaddingX != 0 ? badgePaddingX : badgePadding,
+                badgePaddingY != 0 ? badgePaddingY : badgePadding,
                 badgeBounds);
         badge.setBounds(badgeBounds);
         badgeBoundsSet = true;
