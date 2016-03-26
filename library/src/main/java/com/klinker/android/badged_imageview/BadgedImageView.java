@@ -108,9 +108,7 @@ public class BadgedImageView extends ImageView {
     public void draw(Canvas canvas) {
         super.draw(canvas);
         if (badge != null) {
-            if (!badgeBoundsSet) {
-                layoutBadge();
-            }
+            layoutBadge();
             badge.draw(canvas);
         }
     }
