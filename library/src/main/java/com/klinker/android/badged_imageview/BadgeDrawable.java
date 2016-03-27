@@ -55,23 +55,24 @@ public class BadgeDrawable extends Drawable {
     public BadgeDrawable(Context context, String text) {
         this.text = text;
 
+        final DisplayMetrics dm = context.getResources().getDisplayMetrics();
+
+        final float density = dm.density;
+        final float scaledDensity = dm.scaledDensity;
+        final float padding = PADDING * density;
+        final float cornerRadius = CORNER_RADIUS * density;
+
+        final Rect textBounds = new Rect();
+        final TextPaint textPaint = new TextPaint(Paint.ANTI_ALIAS_FLAG | Paint
+                .SUBPIXEL_TEXT_FLAG);
+        textPaint.setTypeface(Typeface.create(TYPEFACE, TYPEFACE_STYLE));
+        textPaint.setTextSize(TEXT_SIZE * scaledDensity);
+        textPaint.getTextBounds(text, 0, text.length(), textBounds);
+
+        height = (int) (padding + textBounds.height() + padding);
+        width = (int) (padding + textBounds.width() + padding);
+
         if (bitmaps.get(text) == null) {
-            final DisplayMetrics dm = context.getResources().getDisplayMetrics();
-
-            final float density = dm.density;
-            final float scaledDensity = dm.scaledDensity;
-            final float padding = PADDING * density;
-            final float cornerRadius = CORNER_RADIUS * density;
-
-            final Rect textBounds = new Rect();
-            final TextPaint textPaint = new TextPaint(Paint.ANTI_ALIAS_FLAG | Paint
-                    .SUBPIXEL_TEXT_FLAG);
-            textPaint.setTypeface(Typeface.create(TYPEFACE, TYPEFACE_STYLE));
-            textPaint.setTextSize(TEXT_SIZE * scaledDensity);
-            textPaint.getTextBounds(text, 0, text.length(), textBounds);
-
-            height = (int) (padding + textBounds.height() + padding);
-            width = (int) (padding + textBounds.width() + padding);
 
             Bitmap bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
             bitmap.setHasAlpha(true);
