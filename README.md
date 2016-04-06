@@ -27,7 +27,7 @@ This is the preferred way. Simply add:
 
 ```groovy
 dependencies {
-    compile 'com.klinkerapps:badged_imageview:1.0.4@aar'
+    compile 'com.klinkerapps:badged_imageview:1.0.4'
 }
 ```
 
