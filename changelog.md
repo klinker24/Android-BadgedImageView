@@ -1,5 +1,8 @@
 ## Changelog
 
+### Version 1.0.5:
+- Updated dependencies and build tools for SDK 25
+
 ### Version 1.0.4:
 - Added example `RecyclerView` activity
 - Fixed padding not being set correctly when `BadgedImageView` gets recycled
